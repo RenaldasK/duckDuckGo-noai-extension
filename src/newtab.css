@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  background-position: center center;
+  background-repeat: no-repeat no-repeat;
+  background-size: cover;
+  font-family:
+    'DuckSansDisplay',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen-Sans,
+    Ubuntu,
+    Cantarell,
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    sans-serif;
+}
+
+.search-container {
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  margin-bottom: 24px;
+  width: 230px;
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0px 8px 0px 20px;
+  height: 44px;
+  border-radius: 13px;
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow:
+    0 1px 6px rgba(0, 0, 0, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.1s ease-in-out;
+}
+
+.search-input-wrapper:focus-within {
+  box-shadow:
+    rgba(0, 0, 0, 0.06) 0px 4px 12px 0px,
+    rgba(0, 0, 0, 0.08) 0px 20px 40px 0px;
+}
+
+input[type='text'] {
+  font-size: 15px;
+  border: none;
+  width: 500px;
+  outline: none;
+}
+
+input[type='text']::placeholder {
+  color: rgba(0, 0, 0, 0.36);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+button svg {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+button:hover svg {
+  fill: rgba(0, 0, 0, 0.5);
+}
+
+.customise-btn {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  backdrop-filter: blur(8px);
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+}
+
+#bg-picker {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #181817;
+  }
+
+  input[type='text'],
+  .search-input-wrapper {
+    background-color: #30302f;
+    color: #ffffff;
+  }
+
+  input[type='text']::placeholder {
+    color: rgba(255, 255, 255, 0.36);
+  }
+
+  button svg {
+    fill: rgba(255, 255, 255, 0.3);
+  }
+
+  button:hover svg {
+    fill: rgba(255, 255, 255, 0.5);
+  }
+}
